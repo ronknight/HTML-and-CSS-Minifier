@@ -1,0 +1,39 @@
+flowchart-diagram
+
+title Minify HTML with Embedded CSS
+
+// Define groups for better organization
+Setup [color: lightblue] {
+  Install Python 3.x
+  Install htmlmin
+  Install csscompressor
+}
+
+Execution [color: lightgreen] {
+  Save HTML as input.html
+  Run script [label: Run the script]
+}
+
+Function Steps [color: lightcoral] {
+  Read input HTML
+  Minify HTML [icon: file-text]
+  Extract embedded CSS [icon: code]
+  Minify CSS [icon: zap]
+  Replace original CSS [icon: refresh-cw]
+  Write output HTML [icon: save]
+}
+
+// Define the flow
+Start [shape: oval, icon: play] > Install Python 3.x [icon: terminal]
+Install Python 3.x > Install htmlmin [icon: terminal]
+Install htmlmin > Install csscompressor [icon: terminal]
+Install csscompressor > Save HTML as input.html [icon: file-text]
+Save HTML as input.html > Run script [icon: terminal]
+Run script > Read input HTML [icon: file-text]
+Read input HTML > Minify HTML
+Minify HTML > Extract embedded CSS
+Extract embedded CSS > Minify CSS
+Minify CSS > Replace original CSS
+Replace original CSS > Write output HTML
+Write output HTML > End [shape: oval, icon: stop-circle]
+
